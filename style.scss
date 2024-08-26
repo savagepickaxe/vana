@@ -17,7 +17,6 @@ header{
 }
 nav{
     height:80px;
-
 }
 nav h1{
     font-size: 3rem;
@@ -29,7 +28,6 @@ nav h1{
 nav ul{
     float:right;
     margin-right:45px;
-    
 }
 nav ul li {
     display:inline-block;
@@ -44,7 +42,6 @@ nav ul li a{
 nav img{
   color:green;
 }
-
 label #btn,
 label #cancel{
     color:green;
@@ -59,29 +56,23 @@ label #cancel{
     display: none;
 }
 @media (max-width: 1250px){
-   
     nav ul li {
-      
         line-height: 110px;
         margin:0 25px;
     }
     nav ul li a{
         font-size: 1.6rem;
-    }
-}
+    }}
 @media (max-width: 1118px){
     nav h1{
         left: 8%;
-    }
-}
+    }}
 @media (max-width: 944px){
     nav h1{
         left: 6%;
         top:20px;
         font-size: 2.8rem;
-    }
-    
-}
+    }}
 @media (max-width: 860px){
     label #btn{
         display:block;
@@ -114,13 +105,8 @@ label #cancel{
    }
    #check:checked ~ label #cancel{
     display: block;
-}
-}
-
-
+}}
 //accueil
-
-
 .shop{
     z-index: 1;
     position:absolute;
@@ -129,7 +115,6 @@ label #cancel{
     text-align: center;
     color:white;
     max-width:50%;
-   
 }
 .shop h1{
     
@@ -147,7 +132,6 @@ label #cancel{
     font-weight: 300;
     font-size: 2rem;
     line-height: 80px;
-   
 }
 .btn{
     margin-top: 40px;
@@ -159,19 +143,13 @@ label #cancel{
     font-weight: 10;
     border-color: #1B604C;
 }
-
-
-
-
 //Compliments
-
 .compliments{
     max-height: 120px;
     display: flex;
     overflow-x: auto;
     background-color: #1B604C;
     align-items: center;
-   
 }
 .wrapper::-webkit-scrollbar{
     width:0;
@@ -183,7 +161,6 @@ label #cancel{
   font-size: 0.8rem;
     text-align: center;
    font-weight: 10;
-   
 }
 .compliments img{
     height:30px;
@@ -192,8 +169,7 @@ label #cancel{
 }
 @media (min-width:1336px){
     .compliments{
-        max-height: 200px;
-        
+        max-height: 200px;    
     }
     .compliments .item{
         height:230px;
@@ -205,55 +181,262 @@ label #cancel{
         height:50px;
        margin-top: 30px;
        margin-bottom: 10px;
-    }
-}
+    }}
 .container__un{
     min-width: 100%;
     overflow-x: hidden;
 }
 
-
+// MIN 320PX
 @media(min-width: 320px){
+    .images__pc{
+        display: none;
+    }
    .container__un{
-    height:120vh;
-    overflow: hidden;
+    height:180vh;
+    overflow-x: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-content: center;
+    height:100%;
    }
     .image1{
-       width: 1000px;
-     position: absolute;
-     right:-340px;
-     top:-100px;
+       width: 75%;
+   position:relative;
+   align-self: center;
+   top: 3%;
+     
     }
     .container__un h1{
-
+        position: relative;
         color:#1B604C;
         align-self:center;
-       margin-top: 140%;
-       width: 50%;
+       margin-top: 20%;
+       width: 65%;
        font-size: 2.7rem;
-       margin-right:20px;
        line-height: 50px;
+       border-top: #1B604C;
 }
 .container__un p {
-    margin-top: 90px;
+    margin-top: 10%;
     width:90%;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 5%;
     font-size: 0.8rem;
     font-weight: 100;
+    border-top:#1B604C ;
+    color: #1B604C;
 }
 h5 , h6{
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     color:#1B604C;
-    width:40%;
+    width:160px;
     text-align: center;
     height:110px;
+    border:#1B604C solid 1px;
+    margin-top: 20px;
+    padding-top: 25px;
 }
 .subtitle{
     display: flex;
+    width: 100%;
+}
+.limonade h2{
+    font-size: 1.8rem;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 5%;
+    color: #1B604C;
+}
+.limonade p{
+    font-size: 0.8rem;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+    color: #1B604C;
+}
+.image2{
+    width: 80%;
+  position: relative;
+  align-self:self-start;
+ right:11%;
+ }
+ .punch h2{
+    font-size: 1.8rem;
+    max-width: 50%;
+  float: right;
+    color: #1B604C;
+    margin-top:-90%
+}
+.punch p{
+    font-size: 0.8rem;
+    width: 50%;
+    margin-top: -65%;
+   float: right;
+    color: #1B604C;
+}
+.image3{
+    width: 100%;
+    position: relative;
+    margin-top: 20%;
+}
+.container__trois{
+    max-width: 100%;
+    overflow-x: hidden;
+    
+}
+}
+@media(min-width: 374px) {
+     h5 , h6{
+        font-size: 1.3rem;
+        width:50%;
+        text-align: center;
+        height:110px;
+        border:#1B604C solid 1px;
+        margin-top: 20px;
+        padding-top: 25px;
+    }
+@media(min-width:425px){
+.subtitle{
+    width: 425px;
+}
+h5 , h6{
+    font-size: 1.5rem; 
+    height:110px;
+    margin-top: 20px;
+    padding-top: 25px;
+}
+.punch p{
+    width: 30%;
+    margin-right: 10%;
+}
+.limonade p{
+    width: 30%;
+    margin-left: 15%;
+}
+.punch h2{
+    width:30%;
+    margin-right: 10%;
+}
+}
+@media(min-width:768px){
+ .subtitle{
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;;
+ }
+ h5, h6{
+    width:29%;
+ }
+
+}
+@media (min-width:320px){
+
+    .container__deux h1, p{
+       text-align: center;
+       color: #1B604C;
+}
+.container__deux h1{
+    width: 55%;
+    margin-left: 25%;
+    margin-top: 10%;
+    font-size: 2.5rem;
+
+}
+.container__deux p{
+    margin-top: 10%;
+    width:90%;
+    margin-left: 5%;
+    font-size: 0.8rem;
+}
+.container__trois{
+    max-width: 100%;
+    margin-top: 10%;
+    position: relative;
+    overflow: hidden;
+    height:100vh;
+}
+
+}
+@media (min-width:375px){
+    .container__deux h1{
+        width: 50%;
+    }
+}
+@media (min-width:425px){
+    .container__deux h1{
+        width: 45%;
+    }
+
+}
+
+// page desktop animation
+@media(min-width:1024px){
+    .container__un{
+        max-width: 100%;
+        text-align: left;
+      display:block;
+    }
+    .image1 , .image2{
+       display: none;
+      
+}
+
+.container__un h1{
+margin: 0;
+padding: 0;
+align-self:normal;
+position: relative;
+width: 30%;
+height: 1%;
+margin-left: 15%;
+margin-top:13%;
+float: left;
+text-align: left;
+font-size: 3rem; 
+}
+.container__un p{
+    margin: 0;
+    margin-left:15%;
+    width: 28%;
+float:left;
+  text-align: left;
+    margin-top:5%;
+    font-size: 0.9rem;
+}
+.images__pc img{
+    width: 100%;
+    position: relative;
+    
+}
+.images__pc{
+  display: block;
+   
+    width: 40%;
+    margin:0%;
+    float: right;
+}
+.images__pc img{
+}
+.canverte{
+    z-index: 1;
+}
+h5 , h6{
+    border:0px;
+}
+}
+.canrouge{
+  position: absolute;
+  margin-top: -280%;
+}
+.canverte{
+    position: absolute;
+    margin: ;
+
+}
+.subtitle{
+    position: absolute;
 }
 }
