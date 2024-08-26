@@ -418,6 +418,7 @@ label #cancel {
   }
   .images__pc img {
     width: 100%;
+    position: relative;
   }
   .images__pc {
     display: block;
@@ -426,7 +427,7 @@ label #cancel {
     float: right;
   }
   .canverte {
-    z-index: 100;
+    z-index: 1;
   }
   h5, h6 {
     border: 0px;
@@ -434,10 +435,11 @@ label #cancel {
 }
 @media (min-width: 374px) {
   .canrouge {
+    position: absolute;
     margin-top: -280%;
   }
   .canverte {
-    margin: 0;
+    position: absolute;
   }
   .subtitle {
     position: absolute;
