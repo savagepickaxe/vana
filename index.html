@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -66,14 +69,16 @@
 
 
     </div>
+    <div class="murBlanc">
     <div class="container__un">
         <img src="assets/VanaBoreal copie.png" alt="" class="image1">
-        <h1>L'energie naturelle</h1>
+        <h1 id="textAnim" class="titreAnim">L'energie naturelle</h1>
+        <div class="textePc">Tous nos ingrédients sont biologiques et naturels, sans aucun arome, sucre, ni agent de conservation.</div>
         <div class="images__pc">
             <img src="assets/VanaBoreal copie.png" alt="" class="canverte">
             <img src="assets/Vanapunchsauvagepng.png" alt="" class="canrouge">
         </div>
-        <p> Une limonade avec un soupçon de sapin et de framboise.
+        <p id="textAnim" class="pAnim"> Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
@@ -85,6 +90,7 @@
             <h5>caféine & théine naturelle</h5>
             <h6>electrolytes 100% naturels</h6>
         </div>
+        <div class="test">
         <div class="limonade">
         <h2>Limonade boréale</h2>
         <p>Boisson unique avec un soupçon de sapin et de framboise.</p>
@@ -92,7 +98,11 @@
     <img src="assets/Vanapunchsauvagepng.png" alt="" class="image2">
     <div class="punch">
         <h2>Punch sauvage </h2>
-        <p>Boisson unique avec un soupçon de sapin et de framboise.</p>
+        <p>Limonade avec
+            un soupçon de sapin 
+            et de fraise</p>
+    </div>
+</div>
     </div>
     </div>
     <img src="assets/Rectangle 7.png" alt="" class="image3">
@@ -116,5 +126,93 @@
     </div>
     </div>
 </body>
+
+<script>
+    let mm = gsap.matchMedia();
+
+    gsap.registerPlugin(ScrollTrigger);
+
+const titreAnim = document.querySelector(".titreAnim");
+
+const test = document.querySelector(".pAnim")
+
+const canAnim = document.querySelector(".images__pc")
+
+
+const containerun = document.querySelector(".container__un")
+
+const text2 = document.querySelector(".subtitle")
+
+// add a media query. When it matches, the associated function will run
+mm.add("(min-width: 1000px)", () => {
+
+  // this setup code only runs when viewport is at least 600px wide
+  console.log("desktop")
+	
+  ScrollTrigger.create({
+	trigger:".murBlanc",
+	start:"top top",
+	end:"bottom bottom",
+	pin:".container__un"
+})
+const ltext = gsap.to(test,{
+    x:-500,
+    duration:3,
+    ease:"none"
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"top 0%",
+    end:"+=300",
+  
+    animation:ltext,
+    scrub:1,
+  
+})
+const ltitre = gsap.to(titreAnim,{
+    x:-500,
+    duration:3,
+    ease:"none"
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"top 0%",
+    end:"+=300",
+    animation:ltitre,
+    scrub:1,
+    
+})
+const lacan = gsap.to(canAnim,{
+    x:-300,
+    duration:3,
+    ease:"none",
+   
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom 10%",
+    end:() =>'+=200',
+    animation:lacan,
+    scrub:1,
+    
+})
+const ltext2 = gsap.to(text2,{
+    opacity:1,
+    duration:3,
+   delay:2,
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom 10%",
+    end:() =>'+=200',
+    animation:ltext2,
+    scrub:1,
+   
+})
+
+});
+
+
+</script>
 
 </html>

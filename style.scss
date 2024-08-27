@@ -187,8 +187,19 @@ label #cancel{
     overflow-x: hidden;
 }
 
+
+
+
+
+
 // MIN 320PX
 @media(min-width: 320px){
+.test{
+   display: contents ;
+}
+    .textePc{
+        display: none;
+    }
     .images__pc{
         display: none;
     }
@@ -298,6 +309,7 @@ h5 , h6{
         margin-top: 20px;
         padding-top: 25px;
     }
+}
 @media(min-width:425px){
 .subtitle{
     width: 425px;
@@ -374,14 +386,34 @@ h5 , h6{
 
 // page desktop animation
 @media(min-width:1024px){
+  .murBlanc{
+    height:200vh;
+  }
     .container__un{
         max-width: 100%;
         text-align: left;
       display:block;
+      overflow:hidden;
+      height: 80vh;
     }
     .image1 , .image2{
        display: none;
       
+}
+.textePc{
+    font-size: 0.75rem;
+    color: grey;
+    display: block;
+    position: absolute;
+    width: 21%;
+    text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right: 0;
+   line-height: 17px;
+   top:30px;
+   opacity: 0;
 }
 
 .container__un h1{
@@ -403,40 +435,112 @@ font-size: 3rem;
     width: 28%;
 float:left;
   text-align: left;
-    margin-top:5%;
+    margin-top:15%;
     font-size: 0.9rem;
 }
-.images__pc img{
-    width: 100%;
-    position: relative;
-    
-}
+
 .images__pc{
-  display: block;
-   
+  display:flex;
     width: 40%;
     margin:0%;
     float: right;
+    height: 100vh;
+    transform: translateX(-30%);
+    overflow: auto;
 }
-.images__pc img{
-}
+
 .canverte{
     z-index: 1;
 }
 h5 , h6{
     border:0px;
 }
-}
+
 .canrouge{
-  position: absolute;
-  margin-top: -280%;
-}
-.canverte{
     position: absolute;
-
-
-}
-.subtitle{
+   
+  }
+  .canverte , .canrouge{
+      position: absolute;
+      width:100%;
+  }
+  .subtitle{
     position: absolute;
+   margin-top: 25%;
+   align-self: center;
+   justify-content: space-around;
+   opacity: 0;
+
 }
+h5{
+    
+}
+h5 , h6{
+    font-size: 2.5rem;
+    width:65%;
+   
+}
+h5{
+    margin-right: 20%;
+}
+h6{
+    margin-left: 20%;
+}
+
+.limonade h2 , .punch h2{
+    margin: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 50%;
+    max-width: none;
+    float: none;
+    font-size: 3rem;
+    font-weight: 100;
+}
+.limonade p , .punch p{
+    text-align: center;
+    margin: 0;
+    width:40%;
+    float: none;
+    text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right: 0;
+   margin-top: 5%;
+   font-size: 0.8rem;
+   color:#1B604C;
+   
+}
+.limonade , .punch{
+    position: relative;
+  align-items: center;
+  
+
+}
+.test{
+    width: 90%;
+    display: flex;
+   justify-content: space-between;
+    position:absolute;
+   text-align: center;
+left: 0;
+right: 0;
+margin: auto;
+    top:25%;
+    opacity: 0;
+}
+.image3 {
+  
+    margin-top: 0%;
+}
+
+}
+
+.fixed {
+    position: fixed;
+  
 }
