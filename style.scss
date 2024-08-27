@@ -14,7 +14,12 @@
 .container__trois_text{
     display: contents;
 }
-
+.container__cinq2{
+    display: contents;
+}
+.container__cinq2 img{
+    display: none;
+}
 *{
     margin:0;
     padding: 0;
@@ -198,9 +203,66 @@ label #cancel{
     min-width: 100%;
     overflow-x: hidden;
 }
+//footer
+footer{
+    background: grey;
+}
+footer ul{
+    position:initial;
+    margin-right:45px;
+    height: auto;
+    background: grey;
+    color: white;
+    
+}
+.liste_footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.liste_footer li {
+    display:inline-block;
+    line-height: 80px;
+    margin:0 45px;
+    
+}
+footer ul li a{
+    position:relative;
+    color:white;
+    font-size: 1.4rem;
+    
+}
+.liste_footer h2{
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
 
-
-
+}
+.liste_footer h3{
+    text-decoration: underline;
+}
+.media__bas{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+ 
+}
+.media ul li {
+    margin: 10% ;
+   
+    border: 0;
+}
+.media ul li a{
+font-size: 0.7rem;
+font-weight: 100;
+margin: 0 auto;
+left: 0;
+right: 0;
+}
 
 
 
@@ -311,7 +373,7 @@ h5 , h6{
     background-image: url("assets/mobile1.png");
     overflow: auto;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     text-align:center;
     padding-top:10%;
 }
@@ -335,6 +397,96 @@ h5 , h6{
     padding:7%;
     color: white;
     font-weight: 100;
+}
+.container__cinq{
+    text-align: center;
+    padding-top: 30%;
+    padding: 30% 10% 10% 10% ;
+    border: #1B604C 1px solid;
+}
+.container__cinq h2{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    color: #1B604C;
+}
+.container__cinq p{
+    margin-top: 10%;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+.container__cinq h3{
+    color: #1B604C;
+    font-size: 1.5rem;
+    margin-top: 10%;
+}
+.container__six{
+color: #1B604C;
+text-align: center;
+padding: 30% 10% 0% 10% ;
+
+}
+.container__six h2{
+    width:60%;
+    margin: 0 auto;
+}
+.container__six p{
+    margin-top: 10%;
+    font-size: 0.8rem;
+    font-weight: 100;
+    width: 96%;
+    margin: 10% auto;
+    
+}
+.container__six h3{
+    margin-top: -10%;
+}
+.fs-6{
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin:3% auto;
+    padding: 3%;
+    border: #1B604C 1.5px solid;
+
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 8px;
+ 
+}
+.fs-6::placeholder{
+    color: #1B604C;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.mb-5 .fs-6{
+    padding-bottom: 80%;
+}
+.btn__envoyez{
+    background-color: #1B604C;
+    color: #fff;
+    padding: 1rem 1rem;   
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 50%;
+    margin: 5% auto;
+  
+}
+.container__sept img{
+    width:50%;
+}
+.container__sept{
+    text-align: center;
+}
+.container__sept h2{
+    color: #1B604C;
+    font-size: 2rem;
+    font-weight: 100;
+    width: 85%;
+    margin: 5% auto;
 }
 
 
@@ -408,7 +560,7 @@ h5 , h6{
     margin-top: 10%;
     position: relative;
     overflow: hidden;
-    height:100vh;
+    
 }
 
 }
@@ -426,6 +578,7 @@ h5 , h6{
 
 // page desktop animation
 @media(min-width:1024px){
+   
   .murBlanc{
     height:400vh;
   }
@@ -637,8 +790,10 @@ font-weight: 500;
     color: white;
     font-weight: 100;
     text-align: left;
-    width: 30%;
+    font-size: 1.4rem;
+    width: 50%;
     margin-top: 15%;
+    background: none;
 }
 .container__trois h3{
     float: right;
@@ -648,8 +803,41 @@ font-weight: 500;
     margin-right: 2%;
     font-size: 1.7rem;
 }
+ .container__cinq2 , .container__cinq2 img {
+        display: block;
+    }
+    .cinq__tour{
+    display:flex;
+}
+.container__cinq{
+width: 100%;
+height: auto;
+padding: 0;
+padding-top: 10%;
+}
+.container__cinq h2{
+width: 40%;   
+
+}
+.container__cinq p{
+width: 50%;
+left: 0;
+right: 0;
+margin:10% auto;
+}
+.container__cinq p:first-of-type{
+margin-bottom: -5%;
+}
+.container__cinq2{
+width: 100%;
+}
+.image6{
+width: 100%;
+
 }
 
+
+}
 @media(min-width:1440px){
     .container__un{
        
