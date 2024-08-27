@@ -105,6 +105,7 @@
 </div>
     </div>
     </div>
+    <div class="container__quatre">
     <img src="assets/Rectangle 7.png" alt="" class="image3">
 
     <div class="container__deux">
@@ -121,8 +122,19 @@
 </p>
 
     </div>
+</div>
     <div class="container__trois">
-        <img src="assets/msision 1.png" alt="" class="image4">
+      
+        <h2>Notre mission est de reboiser la planete en vendant 
+            les meilleures boissons naturelles de performance.</h2>
+            <h3>Antoine Moses</h3>
+        <p>Chaque année en Amérique du Nord, des milliers d'hectares de forets brulent et des millions 
+            d'arbres sont abattus par l'industrie forestiere.</p>
+           
+    </div>
+    <div class="container__cinq">
+
+
     </div>
     </div>
 </body>
@@ -143,6 +155,9 @@ const containerun = document.querySelector(".container__un")
 
 const text2 = document.querySelector(".subtitle")
 
+const canVerte = document.querySelector(".canverte")
+const canRouge = document.querySelector(".canrouge")
+const text3 = document.querySelector(".test")
 // add a media query. When it matches, the associated function will run
 mm.add("(min-width: 1000px)", () => {
 
@@ -155,33 +170,36 @@ mm.add("(min-width: 1000px)", () => {
 	end:"bottom bottom",
 	pin:".container__un"
 })
+//Le titre SENVA
 const ltext = gsap.to(test,{
-    x:-500,
-    duration:3,
+    x:-1200,
+    duration:2,
     ease:"none"
 })
 ScrollTrigger.create({
     trigger:".murBlanc",
-    start:"top 0%",
+    start:"top -10%",
     end:"+=300",
   
     animation:ltext,
     scrub:1,
   
 })
+//le paragraphe SENVA
 const ltitre = gsap.to(titreAnim,{
-    x:-500,
-    duration:3,
+    x:-1200,
+    duration:2,
     ease:"none"
 })
 ScrollTrigger.create({
     trigger:".murBlanc",
-    start:"top 0%",
+    start:"top -10%",
     end:"+=300",
     animation:ltitre,
     scrub:1,
     
 })
+//La can BOUGE
 const lacan = gsap.to(canAnim,{
     x:-300,
     duration:3,
@@ -190,29 +208,153 @@ const lacan = gsap.to(canAnim,{
 })
 ScrollTrigger.create({
     trigger:".murBlanc",
-    start:"Bottom 10%",
+    start:"Bottom -30%",
     end:() =>'+=200',
     animation:lacan,
     scrub:1,
     
 })
+//ltexte APARAIT
 const ltext2 = gsap.to(text2,{
     opacity:1,
-    duration:3,
+    duration:1,
    delay:2,
 })
 ScrollTrigger.create({
     trigger:".murBlanc",
-    start:"Bottom 10%",
+    start:"Bottom -50%",
     end:() =>'+=200',
     animation:ltext2,
     scrub:1,
    
 })
 
+
+//ltexte DISPARAIT
+const ltext2o = gsap.to(text2,{
+    opacity:0,
+    duration:3,
+  
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -130%",
+    end:() =>'+=900',
+    animation:ltext2o,
+    scrub:1,
+   
+});
+//can rouge BOUGE UN PEU
+const canrouge = gsap.to(canRouge,{
+    x:120,
+    duration:3,
+  
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -120%",
+    end:() =>'+=900',
+    animation:canrouge,
+    scrub:1,
+   
+});
+//can verte BOUGE UN PEU
+const canverte = gsap.to(canVerte,{
+    x:-120,
+    duration:3,
+  
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -120%",
+    end:() =>'+=900',
+    animation:canverte,
+    scrub:1,
+   
 });
 
+//ltexte3 APPARAIT
+const ltext3 = gsap.to(text3,{
+    opacity:1,
+    duration:1,
+   delay:2,
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -140%",
+    end:() =>'+=200',
+    animation:ltext3,
+    scrub:1,
+   
+})
+});
+mm.add("(min-width: 1400px)", () => {
 
+
+//La can BOUGE1440
+const lacan = gsap.to(canAnim,{
+    x:-500,
+    duration:3,
+    ease:"none",
+   
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -30%",
+    end:() =>'+=200',
+    animation:lacan,
+    scrub:1,
+    
+})
+})
+mm.add("(min-width: 2000px)", () => {
+
+
+//La can BOUGE--2000px
+const lacan = gsap.to(canAnim,{
+    x:-700,
+    duration:3,
+    ease:"none",
+   
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -30%",
+    end:() =>'+=200',
+    animation:lacan,
+    scrub:1,
+    
+})
+//can rouge BOUGE UN PEU--2000px
+const canrouge = gsap.to(canRouge,{
+    x:150,
+    duration:3,
+  
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -120%",
+    end:() =>'+=900',
+    animation:canrouge,
+    scrub:1,
+   
+});
+//can verte BOUGE UN PEU--2000px
+const canverte = gsap.to(canVerte,{
+    x:-150,
+    duration:3,
+  
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -120%",
+    end:() =>'+=900',
+    animation:canverte,
+    scrub:1,
+   
+});
+
+})
 </script>
 
 </html>

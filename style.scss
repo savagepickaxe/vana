@@ -3,6 +3,18 @@
     font-family: "VANAFont";
     src: url("./assets/Peachi-Medium.otf")
 }
+//position FIXED animnation
+.fixed {
+    position: fixed;
+  
+}
+.container__quatre{
+    display: contents;
+}
+.container__trois_text{
+    display: contents;
+}
+
 *{
     margin:0;
     padding: 0;
@@ -295,9 +307,37 @@ h5 , h6{
 }
 .container__trois{
     max-width: 100%;
-    overflow-x: hidden;
-    
+    height: auto;
+    background-image: url("assets/mobile1.png");
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align:center;
+    padding-top:10%;
 }
+.container__trois h2{
+    color:white;
+    font-weight: 100;
+}
+.container__trois h3{
+    float: right;
+    margin-right: 10%;
+    font-weight: 100;
+    color: white;
+    margin-top: 5%;
+
+}
+.container__trois p{
+    background-color: grey;
+    display: block;
+    margin-top: 40vh;
+    font-size: 0.8rem;
+    padding:7%;
+    color: white;
+    font-weight: 100;
+}
+
+
 }
 @media(min-width: 374px) {
      h5 , h6{
@@ -387,7 +427,7 @@ h5 , h6{
 // page desktop animation
 @media(min-width:1024px){
   .murBlanc{
-    height:200vh;
+    height:400vh;
   }
     .container__un{
         max-width: 100%;
@@ -446,7 +486,7 @@ float:left;
     float: right;
     height: 100vh;
     transform: translateX(-30%);
-    overflow: auto;
+    
 }
 
 .canverte{
@@ -521,8 +561,11 @@ h6{
   
 
 }
+.limonade{
+    right: 20px;
+}
 .test{
-    width: 90%;
+    width: 100%;
     display: flex;
    justify-content: space-between;
     position:absolute;
@@ -537,10 +580,83 @@ margin: auto;
   
     margin-top: 0%;
 }
+//IMAGE3(apres animation)
+.image3{
+width: 50%;
 
 }
+.container__quatre{
+    display: flex;
+    border: #1B604C 1px solid;
+}
+.container__deux{
+    margin-top:10%;
+}
+.container__deux h1{
+   font-size: 3rem;
+   font-weight: 500;
+   line-height: 100%;
+   width: 40%;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right: 0;
+}
+.container__deux p{
+    width:65%;
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    color:#1B604C;
+}
+.image4{
+    display: none;
+}
+.container__trois{
+    background-image: url("assets/msision\ 1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin-top: 3%;
+}
+.container__trois{
+    text-align: center;
+    padding:10% 6% 0% ;
+}
+.container__trois h2{
+font-size: 3.3rem;
+color: white;
+font-weight: 500;
+}
+.container__trois p{
+    color: white;
+    font-weight: 100;
+    text-align: left;
+    width: 30%;
+    margin-top: 15%;
+}
+.container__trois h3{
+    float: right;
+    margin-top: 5%;
+    color: white;
+    font-weight: 100;
+    margin-right: 2%;
+    font-size: 1.7rem;
+}
+}
 
-.fixed {
-    position: fixed;
-  
+@media(min-width:1440px){
+    .container__un{
+       
+        height:100vh;
+    }
+    .images__pc{
+        width: 30%;
+        
+    }
 }
