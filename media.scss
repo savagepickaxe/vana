@@ -306,7 +306,7 @@ body{
 @media(min-width:1440px){
  
   .compliments .item{
-    margin-top: 80px;
+   
    
     }
 }
@@ -326,5 +326,13 @@ body{
   .f5{
     grid-area: E;
     width: 150%;
+  }
+}
+@media (min-width:1024px){
+  .compliments{
+    opacity: 1;
+  }
+  .container__deux{
+    opacity: 1;
   }
 }

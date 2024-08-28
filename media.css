@@ -308,11 +308,6 @@ body {
     margin-right: 20px;
   }
 }
-@media (min-width: 1440px) {
-  .compliments .item {
-    margin-top: 80px;
-  }
-}
 .f1 {
   grid-area: A;
 }
@@ -333,5 +328,13 @@ body {
   .f5 {
     grid-area: E;
     width: 150%;
+  }
+}
+@media (min-width: 1024px) {
+  .compliments {
+    opacity: 1;
+  }
+  .container__deux {
+    opacity: 1;
   }
 }/*# sourceMappingURL=media.css.map */

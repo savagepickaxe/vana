@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <title>Document</title>
 </head>
@@ -45,7 +45,7 @@
 <img src="assets\banner-canette.png" alt="" class="image_mobile">
 </div>
         
-<div class="compliments">
+<div class="compliments anim-1">
     <div class="item">
         <img src="assets\icone_cafeine_theine.png" alt="">
         <h4>Caféine & théine naturelle</h4></div>
@@ -108,7 +108,7 @@
     <div class="container__quatre">
     <img src="assets/Rectangle 7.png" alt="" class="image3">
 
-    <div class="container__deux">
+    <div class="container__deux anim-1">
 <h1>Un arbre à la fois</h1>
 <p class="texte__1">Antoine Moses, est un jeune entrepreneur Québécois de 25 ans, 
     qui a commencé à planter des arbres dès son jeune âge.
@@ -123,7 +123,7 @@
 
     </div>
 </div>
-    <div class="container__trois">
+    <div class="container__trois anim-1">
       
         <h2>Notre mission est de reboiser la planete en vendant 
             les meilleures boissons naturelles de performance.</h2>
@@ -234,18 +234,64 @@ const text2 = document.querySelector(".subtitle")
 const canVerte = document.querySelector(".canverte")
 const canRouge = document.querySelector(".canrouge")
 const text3 = document.querySelector(".test")
+const sub1 = document.querySelector(".compliments")
+const L1 = document.querySelector(".container__deux")
 // add a media query. When it matches, the associated function will run
 mm.add("(min-width: 1000px)", () => {
 
   // this setup code only runs when viewport is at least 600px wide
   console.log("desktop")
-	
+
   ScrollTrigger.create({
 	trigger:".murBlanc",
 	start:"top top",
 	end:"bottom bottom",
-	pin:".container__un"
+	pin:".container__un",
+  
 })
+const boxes = gsap.utils.toArray('.anim-1');
+boxes.forEach(box => {
+  gsap.from(box, { 
+    opacity:0,
+y:-100,
+duration:2,
+ease:"none",
+    scrollTrigger: {
+      trigger: box,
+      start:"30% bottom",
+      end:"center bottom",
+      scrub:1
+    }
+  })
+});
+
+/*
+//complipents opacity
+ScrollTrigger.create({
+    trigger:".compliments",
+    start:"bottom bottom",
+    end:"bottom bottom",
+    animation:l3,
+    markers:"true",
+    once:"true"
+})
+//container2
+ScrollTrigger.create({
+    trigger:".container__deux",
+    start:"top bottom",
+    end:"80% bottom",
+    animation:l3,
+   scrub:1
+})
+//container2
+ScrollTrigger.create({
+    trigger:".container__trois",
+    start:"top bottom",
+    end:"80% bottom",
+    animation:l3,
+   scrub:1
+})
+*/
 //Le titre SENVA
 const ltext = gsap.to(test,{
     x:-1200,
@@ -277,7 +323,7 @@ ScrollTrigger.create({
 })
 //La can BOUGE
 const lacan = gsap.to(canAnim,{
-    x:-300,
+    x:"-30vw",
     duration:3,
     ease:"none",
    
@@ -322,7 +368,7 @@ ScrollTrigger.create({
 });
 //can rouge BOUGE UN PEU
 const canrouge = gsap.to(canRouge,{
-    x:120,
+    x:"15vw",
     duration:3,
   
 })
@@ -336,7 +382,7 @@ ScrollTrigger.create({
 });
 //can verte BOUGE UN PEU
 const canverte = gsap.to(canVerte,{
-    x:-120,
+    x:"-12vw",
     duration:3,
   
 })
@@ -364,73 +410,23 @@ ScrollTrigger.create({
    
 })
 });
-mm.add("(min-width: 1400px)", () => {
 
 
-//La can BOUGE1440
-const lacan = gsap.to(canAnim,{
-    x:-500,
-    duration:3,
-    ease:"none",
-   
-})
-ScrollTrigger.create({
-    trigger:".murBlanc",
-    start:"Bottom -30%",
-    end:() =>'+=200',
-    animation:lacan,
-    scrub:1,
-    
-})
-})
-mm.add("(min-width: 2000px)", () => {
 
 
-//La can BOUGE--2000px
-const lacan = gsap.to(canAnim,{
-    x:-700,
-    duration:3,
-    ease:"none",
-   
-})
-ScrollTrigger.create({
-    trigger:".murBlanc",
-    start:"Bottom -30%",
-    end:() =>'+=200',
-    animation:lacan,
-    scrub:1,
-    
-})
-//can rouge BOUGE UN PEU--2000px
-const canrouge = gsap.to(canRouge,{
-    x:150,
-    duration:3,
-  
-})
-ScrollTrigger.create({
-    trigger:".murBlanc",
-    start:"Bottom -120%",
-    end:() =>'+=900',
-    animation:canrouge,
-    scrub:1,
-   
-});
-//can verte BOUGE UN PEU--2000px
-const canverte = gsap.to(canVerte,{
-    x:-150,
-    duration:3,
-  
-})
-ScrollTrigger.create({
-    trigger:".murBlanc",
-    start:"Bottom -120%",
-    end:() =>'+=900',
-    animation:canverte,
-    scrub:1,
-   
-});
 
-})
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </html>
