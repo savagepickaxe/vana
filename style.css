@@ -7,6 +7,14 @@
   position: fixed;
 }
 
+.splitText, .splitCont {
+  display: contents;
+}
+
+.image7 {
+  display: none;
+}
+
 .container__quatre {
   display: contents;
 }
@@ -768,10 +776,9 @@ footer ul li a {
     width: 100%;
     height: 100vh;
     margin-top: 3%;
-  }
-  .container__trois {
     text-align: center;
     padding: 10% 6% 0%;
+    overflow: visible;
   }
   .container__trois h2 {
     font-size: 3.3rem;
@@ -786,6 +793,7 @@ footer ul li a {
     width: 50%;
     margin-top: 15%;
     background: none;
+    padding: 0;
   }
   .container__trois h3 {
     float: right;
@@ -824,6 +832,82 @@ footer ul li a {
   }
   .image6 {
     width: 100%;
+  }
+  .image7 {
+    display: flex;
+    position: absolute;
+    width: 30%;
+    align-self: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .container__six {
+    text-align: left;
+    padding: 0;
+    display: flex;
+    border: #1B604C 1px solid;
+  }
+  .splitText, .splitCont {
+    width: 100%;
+    display: block;
+  }
+  .splitText {
+    padding: 5% 0% 0% 8%;
+    display: flex;
+    flex-direction: column;
+  }
+  .splitText h2 {
+    width: 80%;
+    font-size: 3rem;
+    margin: 0;
+  }
+  .splitText p {
+    text-align: left;
+    margin: 0;
+    margin-top: 5%;
+    font-size: 0.9rem;
+    width: 70%;
+    font-weight: 100;
+  }
+  .container__six h3 {
+    margin: 0;
+    margin-top: 1%;
+  }
+  .fs-6 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 3% auto;
+    padding: 0.5%;
+    border: #1B604C 1.5px solid;
+    left: 0;
+    right: 0;
+    width: 50%;
+    border-radius: 5px;
+  }
+  .f1, .f3 {
+    width: 80%;
+  }
+  .f2, .f4 {
+    width: 100%;
+  }
+  .mb-5 .fs-6 {
+    padding-bottom: 50%;
+  }
+  .btn__envoyez {
+    grid-area: F;
+    padding: 3% 5% 9% 5%;
+    width: 30%;
+    margin-left: 70%;
+    left: 0;
+    right: 0;
+  }
+  .splitCont {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    grid-template-rows: 15% 15% 50% 20%;
+    grid-template-areas: "A B" "C D" "E ." "F F";
+    padding-top: 5%;
   }
 }
 @media (min-width: 1440px) {

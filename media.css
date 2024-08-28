@@ -312,4 +312,26 @@ body {
   .compliments .item {
     margin-top: 80px;
   }
+}
+.f1 {
+  grid-area: A;
+}
+
+.f2 {
+  grid-area: B;
+}
+
+.f3 {
+  grid-area: C;
+}
+
+.f4 {
+  grid-area: D;
+}
+
+@media (min-width: 1024px) {
+  .f5 {
+    grid-area: E;
+    width: 150%;
+  }
 }/*# sourceMappingURL=media.css.map */
