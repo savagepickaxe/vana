@@ -3,6 +3,10 @@
   font-family: "VANAFont";
   src: url("./assets/Peachi-Medium.otf");
 }
+.containerA {
+  display: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -297,6 +301,14 @@ footer ul li a {
   margin: 0 auto;
   left: 0;
   right: 0;
+}
+
+.info {
+  text-align: center;
+}
+
+.info h2, .info h3 {
+  color: white;
 }
 
 @media (min-width: 320px) {
@@ -635,7 +647,6 @@ footer ul li a {
     height: 1%;
     margin-left: 15%;
     margin-top: 13%;
-    float: left;
     text-align: left;
     font-size: 3rem;
   }
@@ -643,7 +654,6 @@ footer ul li a {
     margin: 0;
     margin-left: 15%;
     width: 28%;
-    float: left;
     text-align: left;
     margin-top: 15%;
     font-size: 0.9rem;
@@ -652,9 +662,18 @@ footer ul li a {
     display: flex;
     width: 40%;
     margin: 0%;
-    float: right;
-    height: 100vh;
-    transform: translateX(-30%);
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    align-self: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .images__pc img {
+    width: 100%;
+    height: auto;
   }
   .canverte {
     z-index: 1;
@@ -832,6 +851,9 @@ footer ul li a {
   .image6 {
     width: 100%;
   }
+  nav h1 {
+    left: 8%;
+  }
   .image7 {
     display: flex;
     position: absolute;
@@ -908,20 +930,42 @@ footer ul li a {
     grid-template-areas: "A B" "C D" "E ." "F F";
     padding-top: 5%;
   }
+  .liste_footer {
+    display: flex;
+    flex-direction: row;
+    grid-area: A;
+    max-width: 100%;
+  }
+  .liste_footer li {
+    font-size: 1rem;
+  }
+  .info {
+    grid-area: B;
+  }
+  .media {
+    grid-area: C;
+  }
+  .pied {
+    display: grid;
+    grid-template-columns: 5% 35% 20% 35% 5%;
+    grid-template-areas: ". B . A .";
+  }
 }
 @media (min-width: 1440px) {
   .container__un {
     padding-bottom: 20px;
     min-width: 100vw;
+    align-content: none;
+  }
+  .container__un h1 {
+    margin-top: 0;
   }
   .limonade p, .punch p {
     font-size: 1.6rem;
   }
-  .container__un {
-    height: 100vh;
-  }
   .images__pc {
-    width: 40vw;
+    width: 25vw;
+    float: none;
   }
   .images__pc img {
     width: 100%;
@@ -943,10 +987,7 @@ footer ul li a {
   .container__deux p {
     font-size: 2rem;
   }
-  .images__pc {
-    width: 35%;
-  }
-  .images__pc img {
-    width: 80%;
+  .container__un {
+    height: 100vh;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@ body{
     padding-left:0.5rem;
     padding-right:0.5rem;
 }
+
 @media (min-width : 320px) {
   .container {
     width: 100%;
@@ -166,7 +167,7 @@ body{
   .container__accueil{
     background: url('/assets/banner-top 3.png');
     background-size:cover;
-    height: 99.4vh;
+    height: 100vh;
     margin-top: 0;
     margin-left: 0;
   }
@@ -273,7 +274,7 @@ body{
   /* 2xl */
   @media (min-width: 1536px) {
     .container {
-      max-width: 1880px;
+      max-width: none;
     }
     .shop{
       max-width:30%;
@@ -288,8 +289,6 @@ body{
   @media(min-width:768px){
     .compliments{
     justify-content: space-between;
-    
-    
   }
   .compliments .item{
     font-size: 0.7rem;
@@ -304,11 +303,16 @@ body{
   }
 }
 @media(min-width:1440px){
- 
-  .compliments .item{
-   
-   
-    }
+  .compliments{
+    margin: 0% 5% 0% 5%;
+    justify-content: space-around;
+    padding: 0% 5% 0% 5%;
+  }
+  .container__accueil{
+    max-width: 100%;
+    margin: 2% 5% 0 5%;
+    width: auto;
+}
 }
 .f1{
   grid-area: A;

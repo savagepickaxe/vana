@@ -168,7 +168,7 @@ body {
   .container__accueil {
     background: url("/assets/banner-top 3.png");
     background-size: cover;
-    height: 99.4vh;
+    height: 100vh;
     margin-top: 0;
     margin-left: 0;
   }
@@ -279,7 +279,7 @@ body {
 /* 2xl */
 @media (min-width: 1536px) {
   .container {
-    max-width: 1880px;
+    max-width: none;
   }
   .shop {
     max-width: 30%;
@@ -306,6 +306,18 @@ body {
   }
   .compliments .item:last-child {
     margin-right: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .compliments {
+    margin: 0% 5% 0% 5%;
+    justify-content: space-around;
+    padding: 0% 5% 0% 5%;
+  }
+  .container__accueil {
+    max-width: 100%;
+    margin: 2% 5% 0 5%;
+    width: auto;
   }
 }
 .f1 {

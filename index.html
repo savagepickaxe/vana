@@ -10,9 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
     <title>Document</title>
 </head>
 <body>
+    
     <div class="wrapper">
     <div class="container">
     <header>
@@ -23,6 +25,7 @@
         <i class="fa fa-bars" id="btn"></i>
         <i class="fa fa-times" id="cancel"></i>
     </label>
+   
     <h1>VANA</h1>
     <img src="/assets/Boute de fleche.svg" alt="">
 <ul class="liste_nav">
@@ -35,6 +38,8 @@
    
 </nav>
 </header>
+
+
 <div class="container__accueil">
     <div class="shop">
 <h1>Boisson de performance naturelle</h1>
@@ -74,10 +79,6 @@
         <img src="assets/VanaBoreal copie.png" alt="" class="image1">
         <h1 id="textAnim" class="titreAnim">L'energie naturelle</h1>
         <div class="textePc">Tous nos ingrédients sont biologiques et naturels, sans aucun arome, sucre, ni agent de conservation.</div>
-        <div class="images__pc">
-            <img src="assets/VanaBoreal copie.png" alt="" class="canverte">
-            <img src="assets/Vanapunchsauvagepng.png" alt="" class="canrouge">
-        </div>
         <p id="textAnim" class="pAnim"> Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
@@ -85,7 +86,10 @@
             Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
             </p>
-           
+            <div class="images__pc">
+                <img src="assets/VanaBoreal copie.png" alt="" class="canverte">
+                <img src="assets/Vanapunchsauvagepng.png" alt="" class="canrouge">
+            </div>
             <div class="subtitle">
             <h5>caféine & théine naturelle</h5>
             <h6>electrolytes 100% naturels</h6>
@@ -123,9 +127,9 @@
 
     </div>
 </div>
-    <div class="container__trois anim-1">
+    <div class="container__trois ">
       
-        <h2>Notre mission est de reboiser la planete en vendant 
+        <h2 >Notre mission est de reboiser la planete en vendant 
             les meilleures boissons naturelles de performance.</h2>
             <h3>Antoine Moses</h3>
 
@@ -135,7 +139,7 @@
            
     </div>
     <div class="cinq__tour">
-    <div class="container__cinq">
+    <div class="container__cinq " >
     <h2>One Can. One Tree.</h2>
     <p>L'objectif d'Antoine est de partager sa passion en offrant les meilleures boissons
         fonctionnelles tout en contribuant à l'environnement avec un arbre planté pour chaque canette
@@ -193,14 +197,18 @@
 </div>
 
 <footer>
+    <div class="name"></div>
     <div class="pied">
         <ul class="liste_footer">
             <li><a href="#">shop now</a></li>
             <li><a href="#">produits</a></li>
             <li><a href="#">mission</a></li>
-            <h2>Faites-les premiers pas</h2>
-            <h3>info@vanahydratation.ca</h3>
+          
         </ul>
+        <div class="info">
+        <h2>Faites-les premiers pas</h2>
+        <h3>info@vanahydratation.ca</h3>
+    </div>
         <div class="media">
         <ul class="media__bas">
         <li><a href=""> Instagram</a></li>
@@ -216,6 +224,11 @@
 </body>
 
 <script>
+ 
+
+
+
+
     let mm = gsap.matchMedia();
 
     gsap.registerPlugin(ScrollTrigger);
@@ -255,7 +268,7 @@ boxes.forEach(box => {
     opacity:0,
 y:-100,
 duration:2,
-ease:"none",
+ease:"power4",
     scrollTrigger: {
       trigger: box,
       start:"30% bottom",
@@ -322,10 +335,11 @@ ScrollTrigger.create({
     
 })
 //La can BOUGE
-const lacan = gsap.to(canAnim,{
-    x:"-30vw",
+const lacan = gsap.from(canAnim,{
+    x:"30vw",
     duration:3,
     ease:"none",
+    
    
 })
 ScrollTrigger.create({
@@ -410,10 +424,6 @@ ScrollTrigger.create({
    
 })
 });
-
-
-
-
 
 
 
