@@ -43,7 +43,8 @@
 <div class="container__accueil">
     <div class="shop">
 <h1>Boisson de performance naturelle</h1>
-<h2>Achete une canne, on plante un arbre</h2>
+<h2>Achete une canne, <br>
+    on plante un arbre</h2>
 <h3>#OneCanOneTree</h3>
 <button class="btn"> Shop Now</button>
 </div>
@@ -233,7 +234,7 @@
 <script>
  
 
-
+  
 
 
     let mm = gsap.matchMedia();
@@ -259,6 +260,8 @@ const L1 = document.querySelector(".container__deux")
 // add a media query. When it matches, the associated function will run
 mm.add("(min-width: 1000px)", () => {
 
+
+
   // this setup code only runs when viewport is at least 600px wide
   console.log("desktop")
 
@@ -269,6 +272,7 @@ mm.add("(min-width: 1000px)", () => {
 	pin:".container__un",
   
 })
+
 const boxes = gsap.utils.toArray('.anim-1');
 boxes.forEach(box => {
   gsap.from(box, { 

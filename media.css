@@ -186,6 +186,14 @@ body {
   .btn {
     padding: 11px 18px;
   }
+  .btn:hover {
+    background-color: #bade93;
+    color: #ffffff;
+    transition: 0.2s;
+    padding: 21px 27px;
+    height: auto;
+    border: outset 2px #98d358;
+  }
 }
 @media (min-width: 962px) {
   .container {
@@ -275,6 +283,9 @@ body {
     padding: 17px 25px;
     font-size: 1.5rem;
   }
+  .shop {
+    right: 10%;
+  }
 }
 /* 2xl */
 @media (min-width: 1536px) {
@@ -283,6 +294,7 @@ body {
   }
   .shop {
     max-width: 30%;
+    right: 15%;
   }
   .shop h1 {
     font-size: 2rem;
@@ -290,6 +302,11 @@ body {
   .shop h2 {
     font-size: 3, 2rem;
     line-height: 80px;
+  }
+}
+@media (min-width: 1636px) {
+  .shop {
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
