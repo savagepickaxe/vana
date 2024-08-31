@@ -168,7 +168,7 @@ body{
     background: url('/assets/banner-top 3.png');
     background-size:cover;
     height: 100vh;
-    margin-top: 0;
+    margin-top: 12vh;
     margin-left: 0;
   }
   .shop h1{
@@ -186,17 +186,18 @@ body{
       padding:11px 18px;
   }
 .btn:hover{
-  background-color: #bade93;
+  background-color: transparent;
   color: #ffffff;
-  transition: 0.2s;
+  transition: 0.4s ease all;
  padding: 21px 27px;
   height: auto;
-  border:outset 2px #98d358;
+  border:outset 2px #000000;
   
 }
 
 }
   @media (min-width: 962px) {
+    
     .container {
       max-width: 1124px;
     }
@@ -233,7 +234,7 @@ body{
     }
     .container__accueil{
       height: 88vh;
-      margin-top:40px;
+      margin-top:0px;
       width:100%;
   }
     .shop{
@@ -335,7 +336,7 @@ body{
   }
   .container__accueil{
     max-width: 100%;
-    margin: 2% 5% 0 5%;
+    margin: 8% 5% 0 5%;
     width: auto;
 }
 }
@@ -364,4 +365,11 @@ body{
   .container__deux{
     opacity: 1;
   }
+}
+@media (min-width:1600px){
+  .container__accueil{
+    
+    margin: 6% 5% 0 5%;
+  
+}
 }

@@ -18,7 +18,7 @@
     <div class="wrapper">
     <div class="container">
     <header>
-<nav>
+<nav class=".nav-bg">
 
     <input type="checkbox" id="check">
     <label for="check">
@@ -38,12 +38,17 @@
    
 </nav>
 </header>
-
+<div class="imagean">
+    <div class="content">
+    <h1 id="my-text">VANA</h1>
+</div>
+    <img class="imageanime">
+</div>
 
 <div class="container__accueil">
     <div class="shop">
 <h1>Boisson de performance naturelle</h1>
-<h2>Achete une canne, <br>
+<h2>Achète une canne, <br>
     on plante un arbre</h2>
 <h3>#OneCanOneTree</h3>
 <button class="btn"> Shop Now</button>
@@ -77,9 +82,10 @@
     </div>
     <div class="murBlanc">
     <div class="container__un">
+      
         <img src="assets/VanaBoreal copie.png" alt="" class="image1">
         <h1 id="textAnim" class="titreAnim">L'energie naturelle</h1>
-        <div class="textePc">Tous nos ingrédients sont biologiques et naturels, sans aucun arome, sucre, ni agent de conservation.</div>
+        <div class="textePc">Tous nos ingrédients sont biologiques <br>et naturels, sans aucun arome, sucre, <br> ni agent de conservation.</div>
         <p id="textAnim" class="pAnim"> Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
@@ -87,6 +93,7 @@
             Une limonade avec un soupçon de sapin et de framboise.
             Une limonade avec un soupçon de sapin et de framboise.
             </p>
+         
             <div class="images__pc">
                 <img src="assets/VanaBoreal copie.png" alt="" class="canverte">
                 <img src="assets/Vanapunchsauvagepng.png" alt="" class="canrouge">
@@ -130,12 +137,12 @@
 </div>
     <div class="container__trois ">
       
-        <h2 >Notre mission est de reboiser la planete en vendant 
-            les meilleures boissons naturelles de performance.</h2>
+        <h2 >Notre mission est de reboiser <br>la planète en vendant 
+            les meilleures<br> boissons naturelles de performance.</h2>
             <h3>Antoine Moses</h3>
 
-        <p>Chaque année en Amérique du Nord, des milliers d'hectares de forets brulent et des millions 
-            d'arbres sont abattus par l'industrie forestiere.</p>
+        <p>Chaque année en Amérique du Nord, <br class="hid">des milliers d'hectares de forets<br class="hid"> brulent et des millions 
+            d'arbres sont <br class="hid">abattus par l'industrie forestiere.</p>
             <img src="assets\image00031.jpeg" alt="" class="image7">
            
     </div>
@@ -156,9 +163,9 @@
 
     <div class="container__six">
         <div class="splitText">
-        <h2>Faites-les premiers pas</h2>
+        <h2>Faites-les <br>premiers pas</h2>
         <p>Vous aimeriez distribuer nos produits,
-             ou vous désirez en savoir plus sur ceux-ci?
+             ou vous <br class="hid">désirez en savoir plus sur ceux-ci?
         </p>
         <p>Ecrivez-nous à</p>
         <h3>info@vanahydratation.ca</h3>
@@ -168,6 +175,7 @@
                 Québec, QC <br>
                 Canada
             </p>
+
        
     </div>
     <div class="splitCont">
@@ -193,7 +201,7 @@
 </div>
 <div class="container__sept">
     <img src="assets/image00020.jpeg" alt="" class="image4">
-    <h2>Merci de consommer locale et de contribuer à la reforestation</h2>
+    <h2>Merci de consommer <br>locale et de contribuer<br> à la reforestation</h2>
     <img src="assets/image00031.jpeg" alt="" class="image5">
 </div>
 
@@ -232,9 +240,9 @@
 </body>
 
 <script>
- 
+   
 
-  
+
 
 
     let mm = gsap.matchMedia();
@@ -257,10 +265,58 @@ const canRouge = document.querySelector(".canrouge")
 const text3 = document.querySelector(".test")
 const sub1 = document.querySelector(".compliments")
 const L1 = document.querySelector(".container__deux")
+
+const text4 = document.querySelector(".textePc")
 // add a media query. When it matches, the associated function will run
 mm.add("(min-width: 1000px)", () => {
+    const body = document.body;
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+	const currentScroll = window.pageYOffset;
+	if (currentScroll <= 0) {
+		body.classList.remove("scroll-up");
+		return;
+	}
+
+	if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+		body.classList.remove("scroll-up");
+		body.classList.add("scroll-down");
+	} else if (
+		currentScroll < lastScroll &&
+		body.classList.contains("scroll-down")
+	) {
+		body.classList.remove("scroll-down");
+		body.classList.add("scroll-up");
+	}
+	lastScroll = currentScroll;
+});
 
 
+
+  
+
+
+    const myText = new SplitType('#my-text')
+    
+    gsap.to('.char',{
+        y:0,
+        stagger:0.1,
+        delay:0.2,
+        duration:0.2,
+    })
+    
+
+
+    const tl = gsap.timeline({paused: true})
+    const container = document.querySelector('.imagean')
+   
+    tl.to(container,{clipPath:'polygon(7% 7%, 93% 7%, 93% 93%, 7% 93%)'}, '+=1')
+    tl.to(container, {clipPath:'polygon(93% 7%, 93% 7%, 93% 93%, 93% 93%)'}, '+=1')
+    
+    container.addEventListener('mouseover', () => {
+        tl.play()
+    })
 
   // this setup code only runs when viewport is at least 600px wide
   console.log("desktop")
@@ -270,6 +326,7 @@ mm.add("(min-width: 1000px)", () => {
 	start:"top top",
 	end:"bottom bottom",
 	pin:".container__un",
+   
   
 })
 
@@ -375,7 +432,19 @@ ScrollTrigger.create({
     scrub:1,
    
 })
-
+const ltext4 = gsap.to(text4,{
+    opacity:1,
+    duration:1,
+   delay:2,
+})
+ScrollTrigger.create({
+    trigger:".murBlanc",
+    start:"Bottom -65%",
+    end:() =>'+=300',
+    animation:ltext4,
+    scrub:1,
+   
+})
 
 //ltexte DISPARAIT
 const ltext2o = gsap.to(text2,{

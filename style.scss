@@ -3,6 +3,12 @@
   font-family: "VANAFont";
   src: url("./assets/Peachi-Medium.otf");
 }
+.content h1{
+  display: none;
+}
+.hid{
+    display: none;
+}
 .containerA {
   display: none;
 }
@@ -111,10 +117,10 @@ label #cancel {
     left: 8%;
   }
 }
-@media (max-width: 944px) {
+@media (min-width: 944px) {
   nav h1 {
     left: 6%;
-    top: 20px;
+    top: 1vh;
     font-size: 2.8rem;
   }
 }
@@ -147,9 +153,11 @@ label #cancel {
   }
   #check:checked ~ label #btn {
     display: none;
+
   }
   #check:checked ~ label #cancel {
     display: block;
+    
   }
 }
 .shop {
@@ -331,6 +339,7 @@ footer ul li a {
     align-content: center;
     height: 100%;
   }
+  
   .image1 {
     width: 75%;
     position: relative;
@@ -610,6 +619,86 @@ footer ul li a {
   }
 }
 @media (min-width: 1024px) {
+  .scroll-down {
+    header {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+  
+  .scroll-up {
+    header {
+      filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    }
+  }
+
+ header{
+ transition:0.3s;
+ position: fixed;
+ }
+ header{
+  position:fixed;
+  top: 0;
+  background-color:#1B604C ;
+  height: 70px;
+  color:black;
+  z-index: 100;
+  nav h1 , nav ul li a{
+    color:white;
+  }
+ }
+
+  .content h1{
+    display: block;
+    
+  }
+ .char{
+  transform: translateY(115px);
+  transition: transform 0.8s;
+ }
+ .imagean{
+  height: 100vh;
+  position:absolute;
+  width: 100%;
+  top:0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: clip-path 1s;
+ }
+ .content{
+  position: absolute;
+  display: grid;
+  place-items: center;
+ }
+ .content h1{
+  font-size: 8rem;
+  color:#1B604C;
+  font-weight: 900;
+
+ 
+ }
+   .imageanime{
+    background: url('assets/louis-paulin-XvJ4OC7wmjM-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+   
+   }
+
+
+    .container__sept h2 {
+      
+        font-size: 5rem;
+        font-weight: 500;
+     
+        
+        line-height: 120%;
+      }
+    .hid{
+        display:block;
+    }
     .liste_nav li a:hover{
         color:#9ec473;
         border-bottom: #9ec473 1px outset;
@@ -627,6 +716,7 @@ footer ul li a {
     overflow: hidden;
     height: 80vh;
   }
+  
   .image1, .image2 {
     display: none;
   }
@@ -677,6 +767,7 @@ footer ul li a {
     left: 0;
     right: 0;
     margin: 0 auto;
+    margin-top:5%;
   }
   .images__pc img {
     width: 100%;
@@ -810,6 +901,8 @@ footer ul li a {
     font-size: 3.3rem;
     color: white;
     font-weight: 500;
+    line-height: 105%;
+    margin-top: -1%;
   }
   .container__trois p {
     color: white;
@@ -893,7 +986,7 @@ footer ul li a {
   .splitText p {
     text-align: left;
     margin: 0;
-    margin-top: 5%;
+    margin-top: 8%;
     font-size: 0.9rem;
     width: 70%;
     font-weight: 100;
@@ -1007,6 +1100,19 @@ footer ul li a {
 
 }
 @media (min-width: 1440px) {
+  .container__trois h2 {
+    font-size: 4.3rem;
+  
+  }
+  .btn__envoyez{
+    padding:3% 3% 7% 3%;
+    width: 23%;
+   
+  }
+    .container__sept h2 {
+        font-size: 7.2rem;
+        margin: 10% auto;
+      }
   .container__un {
     padding-bottom: 20px;
     min-width: 100vw;
@@ -1033,13 +1139,24 @@ footer ul li a {
   }
   .container__deux h1 {
     font-size: 3.5rem;
+   
   }
   .container__deux {
     max-width: 50%;
+    
+    
   }
+
   
 }
 @media (min-width: 1600px) {
+  .container__trois h2 {
+    font-size: 5.3rem;
+  
+  }
+    .container__sept h2 {
+        font-size: 9.3rem;
+      }
   .container__deux h2 {
     font-size: 4rem;
   }
@@ -1052,5 +1169,29 @@ footer ul li a {
   .container__un p{
     font-size: 1.6rem;
   }
+ .btn__envoyez{
+    padding:3% 3% 7% 3%;
+    width: 23%;
+   font-size: 2rem;
+  
+ }
  
+
+}
+@media (min-width: 1900px) {
+
+  nav h1{
+    top:10%;
+   }
+   .splitText h2{
+    font-size: 6rem;
+   
+   }
+    .splitText p{
+      font-size: 1.8rem;
+      margin-top: 5%;
+    }
+    .splitText h3{
+      font-size: 1.8rem;
+    }
 }
