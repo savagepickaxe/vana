@@ -355,14 +355,24 @@ footer ul li a {
     line-height: 50px;
     border-top: #1B604C;
   }
+  .pAnim {
+    border-top: #1B604C 1px solid;
+    font-size: 1rem;
+    margin-top: 5%;
+  }
+  .titreAnim {
+    margin-bottom: 5%;
+  }
   .container__un p {
     margin-top: 10%;
-    width: 90%;
+    width: 100%;
     text-align: center;
-    margin-left: 5%;
+    left: 0;
+    right: 0;
+    padding: 10%;
+    margin: 0 auto;
     font-size: 0.8rem;
     font-weight: 100;
-    border-top: #1B604C;
     color: #1B604C;
   }
   h5, h6 {
@@ -442,17 +452,20 @@ footer ul li a {
   .container__trois p {
     background-color: grey;
     display: block;
-    margin-top: 40vh;
+    margin-top: 0vh;
     font-size: 0.8rem;
     padding: 7%;
     color: white;
     font-weight: 100;
   }
+  .cinq__tour {
+    border: #1B604C 1px solid;
+    margin-top: 1%;
+  }
   .container__cinq {
     text-align: center;
     padding-top: 30%;
     padding: 30% 10% 10% 10%;
-    border: #1B604C 1px solid;
   }
   .container__cinq h2 {
     width: 80%;
@@ -560,14 +573,6 @@ footer ul li a {
     margin-top: 20px;
     padding-top: 25px;
   }
-  .punch p {
-    width: 30%;
-    margin-right: 10%;
-  }
-  .limonade p {
-    width: 30%;
-    margin-left: 15%;
-  }
   .punch h2 {
     width: 30%;
     margin-right: 10%;
@@ -590,8 +595,9 @@ footer ul li a {
   }
   .container__deux h1 {
     width: 55%;
-    margin-left: 25%;
-    margin-top: 10%;
+    left: 0;
+    right: 0;
+    margin: 10% auto;
     font-size: 2.5rem;
   }
   .container__deux p {
@@ -699,6 +705,8 @@ footer ul li a {
     display: block;
     overflow: hidden;
     height: 80vh;
+    border: #1B604C 1px solid;
+    padding-bottom: 10%;
   }
   .image1, .image2 {
     display: none;
@@ -924,6 +932,7 @@ footer ul li a {
     width: 50%;
     left: 0;
     right: 0;
+    margin: 10% auto;
   }
   .container__cinq p:first-of-type {
     margin-bottom: -5%;
@@ -941,6 +950,9 @@ footer ul li a {
     display: flex;
     position: absolute;
     width: 30%;
+    height: 60%;
+    overflow-y: auto;
+    top: 50%;
     align-self: center;
     margin: auto;
     left: 0;
@@ -1080,8 +1092,28 @@ footer ul li a {
   .name {
     height: 10vh;
   }
+  a {
+    color: white;
+  }
 }
 @media (min-width: 1440px) {
+  .image6 {
+    width: 95%;
+    margin: 5% 3% 5% 0%;
+  }
+  .container__trois p {
+    margin-left: 4vw;
+  }
+  .image5 {
+    display: none;
+    width: 20%;
+  }
+  .container__cinq p {
+    width: 70%;
+    line-height: 140%;
+    font-size: 1.8rem;
+    font-weight: 100;
+  }
   .container__trois h2 {
     font-size: 4.3rem;
   }
@@ -1090,8 +1122,8 @@ footer ul li a {
     width: 23%;
   }
   .container__sept h2 {
-    font-size: 7.2rem;
-    margin: 10% auto;
+    font-size: 5rem;
+    margin: 7% auto;
   }
   .container__un {
     padding-bottom: 20px;
@@ -1123,10 +1155,25 @@ footer ul li a {
   .container__deux {
     max-width: 50%;
   }
+  .splitText h2 {
+    font-size: 4.2rem;
+    line-height: 110%;
+  }
+  .splitText p {
+    font-size: 1.3rem;
+    margin-top: 5%;
+  }
+  .splitText h3 {
+    font-size: 1.8rem;
+  }
 }
 @media (min-width: 1600px) {
+  .container__trois p {
+    margin-left: 6.5vw;
+    font-size: 2rem;
+  }
   .container__trois h2 {
-    font-size: 5.3rem;
+    font-size: 5rem;
   }
   .container__sept h2 {
     font-size: 9.3rem;
@@ -1144,9 +1191,12 @@ footer ul li a {
     font-size: 1.6rem;
   }
   .btn__envoyez {
-    padding: 3% 3% 7% 3%;
+    padding: 3% 3% 8% 3%;
     width: 23%;
     font-size: 2rem;
+  }
+  .container__sept h2 {
+    font-size: 7rem;
   }
 }
 @media (min-width: 1900px) {
@@ -1162,5 +1212,10 @@ footer ul li a {
   }
   .splitText h3 {
     font-size: 1.8rem;
+  }
+}
+@media (min-width: 2200px) {
+  .container__trois h2 {
+    font-size: 7rem;
   }
 }/*# sourceMappingURL=style.css.map */
