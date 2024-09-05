@@ -3,13 +3,29 @@
   font-family: "VANAFont";
   src: url("./assets/Peachi-Medium.otf");
 }
+.overlay{
+  display: none;
+}
+.text-wrapper{
+  display: none;
+}
+.vertextL , .vertextR{
+  display: none;
+}
+.svgt{
+  display: none;
+
+}
 .content h1{
   display: none;
+}
+.hidin{
+  display: block;
 }
 .hid{
     display: none;
 }
-.containerA {
+.containerA { 
   display: none;
 }
 
@@ -65,6 +81,7 @@ nav h1 {
   color: green;
   position: absolute;
   letter-spacing: 10px;
+  cursor: pointer;
 }
 
 nav ul {
@@ -164,7 +181,9 @@ label #cancel {
   z-index: 1;
   position: absolute;
   top: 30%;
-  right: 2%;
+  right: 0%;
+  left: 0%;
+  margin: auto;
   text-align: center;
   color: white;
   max-width: 50%;
@@ -232,14 +251,18 @@ label #cancel {
     max-height: none;
   }
   .compliments .item {
-    min-height: 140px;
-    width: 8%;
+    min-height: 150px;
+    
     font-size: 1rem;
-    margin: 0 20px;
+    margin: 0;
+  }
+  .item h4{
+    font-size: 0.8rem;
+    min-width: 100px;
   }
   .compliments img {
-    height: 50px;
-    margin-top: 30px;
+    height: 65px;
+  
     margin-bottom: 10px;
   }
 }
@@ -249,6 +272,7 @@ label #cancel {
 }
 
 footer {
+  place-items: bottom;
   background: #36382d;
 }
 
@@ -426,6 +450,7 @@ a {
   .subtitle {
     display: flex;
     width: 100%;
+    opacity:1;
   }
   .limonade h2 {
     font-size: 1.8rem;
@@ -436,9 +461,9 @@ a {
   }
   .limonade p {
     font-size: 0.8rem;
-    width: 50%;
-    margin-top: 5%;
-    margin-left: 5%;
+    width: 60%;
+   
+    margin-left: -1%;
     color: #1B604C;
   }
   .image2 {
@@ -456,7 +481,8 @@ a {
   }
   .punch p {
     font-size: 0.8rem;
-    width: 50%;
+    width: 60%;
+    margin-right:-5%;
     margin-top: -65%;
     float: right;
     color: #1B604C;
@@ -467,18 +493,22 @@ a {
     margin-top: 20%;
   }
   .container__trois {
-    max-width: 100%;
-    height: auto;
+  
+    margin-top: 10%;
     background-image: url("assets/mobile1.png");
     overflow: auto;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     text-align: center;
     padding-top: 10%;
   }
   .container__trois h2 {
     color: white;
     font-weight: 100;
+    font-size: 1.6rem;
+    width:100%;
+    margin: 0 auto;
+    line-height: 110%;
   }
   .container__trois h3 {
     float: right;
@@ -488,9 +518,9 @@ a {
     margin-top: 5%;
   }
   .container__trois p {
-    background-color: grey;
+    background-color: #37382c;
     display: block;
-    margin-top: 0vh;
+ margin-top: 40vh;
     font-size: 0.8rem;
     padding: 7%;
     color: white;
@@ -578,20 +608,119 @@ a {
     margin: 5% auto;
   }
   .container__sept img {
-    width: 50%;
+    width: 40%;
   }
+  .image4{
+    align-self: right;
+    float: right;
+     align-self: left;
+    float: left;
+  }
+
   .container__sept {
     text-align: center;
+    height:50vh
+  }
+  .logoArbre{
+    max-width:10%;
   }
   .container__sept h2 {
     color: #1B604C;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
     width: 85%;
     margin: 5% auto;
+    position: absolute;
   }
 }
+
+@media (max-width:425px){
+  .container__sept img {
+    width: 40%;
+  }
+
+  .container__sept {
+    background: url('assets/footerhd.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    height:auto;
+    border: #1B604C 1px solid;
+    padding: 50% 0% 80% 0%;
+  }
+  .image4 , .image5{
+    
+      position: absolute;
+      max-width: 40vw;
+  z-index: 1;
+  }
+ .image4{
+    left: 0;
+    margin-top: 35vh;
+ }
+  .image5{
+    right: 0;
+    margin-top: -20vh;
+  }
+  .logoArbre{
+    max-width:10%;
+  }
+.container__sept h2{
+  font-size:1.5rem;
+  margin: 10%;
+  z-index: 100;
+}
+.social-icons {
+ margin-top: 20vh;
+
+
+}
+.social-icon {
+
+ margin:2%;
+}
+}
+@media (max-width:320px){
+  .container__sept {
+
+    padding: 60% 0% 80% 0%;
+  }
+  .image5{
+    right: 0;
+    margin-top: -18vh;
+  }
+  .social-icons {
+    margin-top: 18vh;
+   
+   
+   }
+   .social-icon {
+
+    margin:1%;
+   }
+}
 @media (min-width: 374px) {
+  .container__trois {
+  
+ 
+    background-size: cover;
+  
+  }
+  .container__trois p{
+    margin-top: 140%;
+    font-size: 1rem;
+  }
+  .image_mobile{
+    width:490px !important;
+    bottom:11.2% !important;
+  }
+  .container__trois h2 {
+    font-size: 2.4rem;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+  }
   h5, h6 {
     font-size: 1.3rem;
     width: 50%;
@@ -603,6 +732,11 @@ a {
   }
 }
 @media (min-width: 425px) {
+  .image_mobile{
+    width:520px !important;
+   
+
+  }
   .subtitle {
     width: 425px;
   }
@@ -679,9 +813,255 @@ a {
 
 
 @media (min-width: 1024px) {
+.modalSocial a svg{
+  width: 30px;
+}
+.modalSocial{
+  display: flex;
+width: 52.5%;
+margin: 5% auto;
+ 
+}
+
+  .modal1 {
+    max-width: 50%;
+    padding: 7.5% 1.5% 5% 1.5%;
+    
+  }
+  .modal1 p{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Nokora", sans-serif;
+  }
+  .modal2{
+   width:50%;
+    background-image: url("assets/mapcommerce 2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 400px;
+    position: relative;
+    border-radius: 8px 0 0 8px;
+  }
+.modal form input{
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 5px;
+  border: 1px solid #1B604C;
+}
+.poparb{
+  position: absolute;
+  top: -28px;
+  left: 65%;
+  width: 50px;
+
+}
+.sub{
+  width: 95%;
+  margin:0 auto;
+  left: 0;
+  right: 0;
+ 
+  display: block;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #1B604C;
+  background-color: #1B604C;
+  color: white;
+  cursor: pointer;
+}
+.sub:hover{
+  background-color: white;
+  color: #1B604C;
+}
+.modal form input::placeholder{
+  color: #1B604C;
+}
+.modal form input:focus{
+  outline: none;
+}
+.modal form input:focus::placeholder{
+  color: #1B604C;
+}
+.close{
+  background: none;
+  border: none;
+  font-size: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.close:hover {
+  color:#1B604C;
+  
+}
+  .overlay{
+  display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:20000;
+    background-color: rgba(0,0,0,0.7);
+    background-image: url("assets/footerhd.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .modal{
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top:50vh;
+    transform: translateY(-50%);
+    background-color: white;
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    filter: drop-shadow(0 0px 5px rgb(255, 255, 255));
+  }
+  .modal h2{
+    font-size: 2rem;
+    color: #1B604C;
+    text-align: center;
+    margin-top: 1%;
+    font-weight: 800;
+    font-family: "Nokora", sans-serif;
+   
+  }
+  
+  .show-modal{
+   display: block;
+    animation:  show 0.2s;
+
+  }
+  @keyframes show{
+    from{
+    display:none;
+      transform: scale(0);
+    }
+    to{
+      display: block;
+      transform: scale(1);
+    }
+  }
+  .hide-modal{
+   display: none;
+    animation:  hide 0.25s;
+  }
+
+  @keyframes hide{
+    from{
+      display: block;
+      transform: scale(1);
+    }
+    to{
+      display: hidden;
+      transform: scale(0);
+    }
+  }
+  
+  .text-wrapper{
+ 
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    background-color:#1B604C;
+    border-bottom: white 1px solid;
+    overflow: hidden;
+  }
+  @keyframes move-rtl {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1000%);
+    }
+    
+  }
+  .text-wrapper h1{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color:white;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: move-rtl 40000ms linear infinite;
+  }
+  .svgt{
+  display: inline;
+  }
+  .mission{
+    color: white;
+  }
+  .vertextR{
+    display: block;
+    writing-mode:vertical-lr;
+   transform: rotate(180deg);
+    position: absolute;
+    align-self: start;
+    margin-top:3% ;
+    width: 90%;
+    margin-left: 2%;
+    color: #1B604C;
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:0.8rem;
+    z-index: 10;
+    letter-spacing: 5px;
+  }
+ .vertextL {
+  display: block;
+  letter-spacing: 5px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  align-self: start;
+  margin-top:5% ;
+  height: 40%;
+  margin-left: 2%;
+  font-family: "Nokora", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:0.8rem;
+  z-index: 10;
+ }
+ .cinq__tour .vertextL{
+  color:#1B604C;
+ }
+  .shop{
+    left:auto;
+    right:2x;
+    margin:none;
+  }
+  .hidin{
+    display: none;
+}
+  .compliments {
+    max-height: none;
+    height: 13vh;
+    justify-content: space-around;
+   padding: 0% 5% 0% 5%;  
+  }
+  .item{
+    margin: 0;
+  }
+
   .name{
     border-bottom: white 1px solid;
-    width:95%;
+    width:100%;
     margin: 0 auto;
     text-align: center;
     
@@ -693,11 +1073,51 @@ a {
     
   }
 
+.container__sept{
+  background: url('assets/footerhd.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: clip-path 1s;
+background-position: bottom;
+}
 
+.logoArbre{
+  max-width: 5vw;
+  position: absolute;
+  align-self: baseline;
+  margin-top: 10%;
+}
 
+.social-icons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20%;
+}
+.social-icon {
+  width: 5vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+ margin:6%;
+ 
+}
 
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
 
-
+.social-icon:hover {
+  color: #007bff; /* Change la couleur au survol, ou selon ta préférence */
+}
 
 
 
@@ -710,12 +1130,16 @@ a {
   .scroll-down {
     header {
       transform: translate3d(0, -100%, 0);
+      top:0;
     }
+
   }
   
   .scroll-up {
     header {
-      filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+     
+      filter: drop-shadow(0 -10px 20px rgb(76, 173, 76));
+      top:0;
     }
   }
 
@@ -725,7 +1149,7 @@ a {
  }
  header{
   position:fixed;
-  top: 0;
+ 
   background-color:#1B604C ;
   height: 70px;
   color:black;
@@ -772,10 +1196,12 @@ a {
     width: 100vw;
    }
     .container__sept h2 {
-      
-        font-size: 5rem;
+    
+      align-self: start;
+      z-index: 100;
+        font-size: 4.5rem;
         font-weight: 500;
-     
+     margin: 20%;
         
         line-height: 120%;
       }
@@ -796,7 +1222,7 @@ a {
     display: block;
     overflow: hidden;
     height: 80vh;
-    border-bottom: #1B604C 1px solid;  
+    
     padding-bottom: 10%;
   }
   
@@ -958,7 +1384,9 @@ a {
   .container__deux p {
     width: 65%;
     font-size: 0.8rem;
-    font-weight: 100;
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -966,7 +1394,22 @@ a {
     color: #1B604C;
   }
   .image4 {
-    display: none;
+   align-self:flex-end;
+    margin: 10%;
+   left: 1px;
+   right: 0;
+z-index: 1;
+
+  }
+  .image5{
+    align-self: self-start;
+    margin: 5%;
+    right: 1px;
+    z-index: 1;
+  }
+  .image4 , .image5{
+    position:absolute;
+    max-width:20vw;
   }
   .container__trois {
     background-image: url("assets/msision 1.png");
@@ -989,7 +1432,9 @@ a {
   }
   .container__trois p {
     color: white;
-    font-weight: 100;
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: left;
     font-size: 1.4rem;
     width: 50%;
@@ -1021,7 +1466,9 @@ a {
     width: 40%;
   }
   .container__cinq p {
-    width: 50%;
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     left: 0;
     right: 0;
     margin: 10% auto;
@@ -1041,10 +1488,10 @@ a {
   .image7 {
     display: flex;
     position: absolute;
-    width: 30%;
-    height: 60%;
+    width: 18%;
+    
     overflow-y:auto;
-    top: 50%;
+    top: 60%;
     align-self: center;
     margin: auto;
     left: 0;
@@ -1076,7 +1523,9 @@ a {
     margin-top: 8%;
     font-size: 0.9rem;
     width: 70%;
-    font-weight: 100;
+    font-family: "Nokora", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   .container__six h3 {
     margin: 0;
@@ -1132,6 +1581,9 @@ a {
     margin: 0;
     justify-content: space-between;
     width: 10%;
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   .liste_footer li {
     margin: 0;
@@ -1143,6 +1595,11 @@ a {
   .info {
     grid-area: B;
     text-align: left;
+  }
+  .info h2{
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   .info h3{
     text-decoration: underline;
@@ -1179,10 +1636,16 @@ a {
     font-size: 1rem;
     margin: 8% 0% 0% 0%;
     text-align: right;
+    font-family: "Nokora", sans-serif;
+    font-weight: 300;
+    font-style: normal;
   }
   .politique p {
     font-size: 0.6rem;
-    margin: 14% 0% 0% 0%;
+    margin: 5% 0% 0% 0%;
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   .pied {
     display: grid;
@@ -1190,19 +1653,39 @@ a {
     grid-template-areas: ". B . A ." ". C D E .";
   }
   .name {
-    height: 10vh;
+    height: 13vh;
   }
  a{
   color:white;
+  font-family: "Nokora", sans-serif;
+  font-weight: 400;
+  font-style: normal;
  }
 }
 @media (min-width: 1440px) {
+  .container__un .vertextL{
+    margin-top: 1%;
+    margin-left: 4.2%;
+  }
+  .vertextL , .vertextR {
+    font-size: 1rem;
+  }
+  .compliments {
+    max-height: none;
+    height: 18vh;
+    justify-content: space-around;
+   padding: 0% 5% 0% 5%;  
+  }
+  .social-icons {
+  
+    margin-top: 15%;
+  }
   .lang{
    
     margin-top: 5%;
   }
   .politique{
-    margin-top:0;
+    margin-top:10%;
   }
 
   .politique p{
@@ -1212,6 +1695,12 @@ a {
   .info{
     margin-top:15%;
   }
+  .info h2{
+    font-size: 1.2rem;
+  }
+  .info h3{
+    font-size: 1.3rem;
+  }
   .image6{
     width: 95%;
     margin:5% 3% 5% 0%;
@@ -1220,15 +1709,14 @@ a {
   .container__trois p{
     margin-left: 4vw;
   }
-  .image5{
-    display: none;
-    width: 20%;
-  }
+.container__cinq h2{
+  font-size: 3.5rem;
+}
   .container__cinq p {
-    width: 70%;
+    width: 100%;
     line-height: 140%;
-   font-size: 1.8rem;
-   font-weight: 100;
+   font-size: 1.5rem;
+   
   }
   .container__trois h2 {
     font-size: 4.3rem;
@@ -1239,9 +1727,14 @@ a {
     width: 23%;
    
   }
+  .container__sept{
+    height: 130vh;
+  }
     .container__sept h2 {
         font-size: 5rem;
         margin: 7% auto;
+       z-index: 100;
+       margin-top:20%;
       }
   .container__un {
     padding-bottom: 20px;
@@ -1252,6 +1745,9 @@ a {
     margin-top: 0;
   }
   .container__un p{
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.2rem;
   }
   .limonade p, .punch p {
@@ -1287,9 +1783,39 @@ a {
     .splitText h3{
       font-size: 1.8rem;
     }
+
+    .images__pc {
+    margin-top: 0%;
+   
+    }
+    .media ul li a{
+      font-size: 1rem;
+    }
   
 }
-@media (min-width: 1600px) {
+
+
+@media (min-width: 2000px) {
+
+  .item h4{
+    font-size: 1.5rem;
+   min-width: none; 
+   max-width: none;
+  }
+  .compliments img {
+    height: 85px;
+    margin-top: 0;
+}
+  .container__cinq h2 {
+    font-size: 5.5rem;
+  }
+  .container__cinq p {
+    font-size: 2.3rem;
+   
+  }
+  .container__sept{
+    height:170vh
+  }
 
 .liste_footer li a{
   font-size: 1.7rem;
@@ -1360,13 +1886,13 @@ padding-left:33%;
    font-size: 2rem;
   
  }
- .container__sept h2{
-  font-size: 7rem;
-}
+
 }
 
 @media (min-width: 1900px) {
- 
+  .politique{
+    margin-top:0%;
+  }
   nav h1{
     top:10%;
    }

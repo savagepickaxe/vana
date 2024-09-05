@@ -20,14 +20,14 @@ body{
   .image_mobile{
     position:absolute;
    width:400px;
-    top:47%;
+   bottom:11%;
   }
   .container__accueil{
     height: 82.5vh;
   }
   .shop{
     top:18%;
-    right:5%;
+ 
     max-width:90%;
 }
 .shop h1{
@@ -77,7 +77,7 @@ body{
     }
     .image_mobile{
      width:520px;
-     top:43.6%;
+     top:44.6%;
     }
 
 }
@@ -202,7 +202,8 @@ body{
       max-width: 1124px;
     }
     .shop{
-      right:5%;
+
+
       max-width:28%;
   }
   .shop h1{
@@ -366,10 +367,13 @@ body{
     opacity: 1;
   }
 }
-@media (min-width:1600px){
+@media (min-width:2000px){
   .container__accueil{
     
     margin: 6% 5% 0 5%;
   
+}
+.compliments .item{
+  max-width: none;
 }
 }
