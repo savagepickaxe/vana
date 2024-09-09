@@ -8,6 +8,10 @@
   display: none;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .text-wrapper {
   display: none;
 }
@@ -184,14 +188,13 @@ label #cancel {
 }
 .shop {
   z-index: 1;
-  position: absolute;
-  top: 30%;
+  margin-top: 10%;
+  max-width: none !important;
   right: 0%;
   left: 0%;
-  margin: auto;
+  float: right;
   text-align: center;
   color: white;
-  max-width: 50%;
 }
 
 .shop h1 {
@@ -236,9 +239,13 @@ label #cancel {
   width: 0;
 }
 
+.shopify-buy-frame {
+  display: none;
+}
+
 .compliments .item {
   min-width: 110px;
-  height: 110px;
+  min-height: 110px;
   color: white;
   font-size: 0.8rem;
   text-align: center;
@@ -246,8 +253,7 @@ label #cancel {
 }
 
 .compliments img {
-  height: 30px;
-  margin-top: 20px;
+  min-height: 30px;
   margin-bottom: 5px;
 }
 
@@ -266,6 +272,7 @@ label #cancel {
   }
   .compliments img {
     height: 65px;
+    margin-top: 25%;
     margin-bottom: 10px;
   }
 }
@@ -275,6 +282,7 @@ label #cancel {
 }
 
 footer {
+  place-items: bottom;
   background: #36382d;
 }
 
@@ -500,6 +508,7 @@ a {
     background-image: url("assets/mobile1.png");
     overflow: auto;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
     text-align: center;
     padding-top: 10%;
@@ -626,14 +635,18 @@ a {
   }
   .container__sept h2 {
     color: #1B604C;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 100;
-    width: 85%;
+    width: 100%;
     margin: 5% auto;
-    position: absolute;
   }
 }
-@media (max-width: 425px) {
+@media (min-width: 400px) {
+  .container__sept h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 505px) {
   .container__sept img {
     width: 40%;
   }
@@ -654,22 +667,16 @@ a {
   }
   .image4 {
     left: 0;
-    margin-top: 35vh;
   }
   .image5 {
     right: 0;
-    margin-top: -20vh;
+    margin-top: -110%;
   }
   .logoArbre {
     max-width: 10%;
   }
   .container__sept h2 {
-    font-size: 1.5rem;
-    margin: 10%;
     z-index: 100;
-  }
-  .social-icons {
-    margin-top: 20vh;
   }
   .social-icon {
     margin: 2%;
@@ -697,10 +704,6 @@ a {
   .container__trois p {
     margin-top: 140%;
     font-size: 1rem;
-  }
-  .image_mobile {
-    width: 490px !important;
-    bottom: 11.2% !important;
   }
   .container__trois h2 {
     font-size: 2.4rem;
@@ -782,6 +785,9 @@ a {
   }
 }
 @media (min-width: 1024px) {
+  .compliments {
+    overflow-x: none;
+  }
   .modalSocial a svg {
     width: 30px;
   }
@@ -960,7 +966,7 @@ a {
     white-space: nowrap;
     padding: 0 6rem;
     letter-spacing: 1px;
-    animation: move-rtl 30000ms linear infinite;
+    animation: move-rtl 40000ms linear infinite;
   }
   .svgt {
     display: inline;
@@ -1004,8 +1010,9 @@ a {
     color: #1B604C;
   }
   .shop {
+    align-self: end;
+    margin: 15% 10%;
     left: auto;
-    right: 2x;
     margin: none;
   }
   .hidin {
@@ -1013,9 +1020,10 @@ a {
   }
   .compliments {
     max-height: none;
-    height: 13vh;
+    min-height: 13vh;
     justify-content: space-around;
     padding: 0% 5% 0% 5%;
+    margin: 0% 5% 0% 5%;
   }
   .item {
     margin: 0;
@@ -1035,8 +1043,8 @@ a {
     background: url("assets/footerhd.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
     display: grid;
     place-items: center;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -1045,6 +1053,7 @@ a {
     transition: clip-path 1s;
     transition: clip-path 1s, -webkit-clip-path 1s;
     background-position: bottom;
+    height: auto;
   }
   .logoArbre {
     max-width: 5vw;
@@ -1053,12 +1062,11 @@ a {
     margin-top: 10%;
   }
   .social-icons {
-    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20%;
+    margin-bottom: 25%;
   }
   .social-icon {
     width: 5vw;
@@ -1135,11 +1143,12 @@ a {
     width: 100vw;
   }
   .container__sept h2 {
+    position: relative;
     align-self: start;
     z-index: 100;
     font-size: 4.5rem;
     font-weight: 500;
-    margin: 20%;
+    margin: 20% 20% 2% 20%;
     line-height: 120%;
   }
   .hid {
@@ -1157,7 +1166,7 @@ a {
     min-width: 100vw;
     text-align: left;
     display: block;
-    overflow: hidden;
+    overflow: visible;
     height: 80vh;
     padding-bottom: 10%;
   }
@@ -1200,7 +1209,7 @@ a {
   }
   .images__pc {
     display: flex;
-    width: 40%;
+    width: 30%;
     margin: 0%;
     height: 100%;
     padding: 0;
@@ -1210,7 +1219,6 @@ a {
     left: 0;
     right: 0;
     margin: 0 auto;
-    margin-top: 5%;
   }
   .images__pc img {
     width: 100%;
@@ -1350,11 +1358,10 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin-top: 3%;
     text-align: center;
     padding: 10% 6% 0%;
-    overflow: visible;
   }
   .container__trois h2 {
     font-size: 3.3rem;
@@ -1585,7 +1592,7 @@ a {
     grid-template-areas: ". B . A ." ". C D E .";
   }
   .name {
-    height: 13vh;
+    min-height: 13vh;
   }
   a {
     color: white;
@@ -1604,12 +1611,9 @@ a {
   }
   .compliments {
     max-height: none;
-    height: 18vh;
+    min-height: 18vh;
     justify-content: space-around;
     padding: 0% 5% 0% 5%;
-  }
-  .social-icons {
-    margin-top: 15%;
   }
   .lang {
     margin-top: 5%;
@@ -1651,12 +1655,8 @@ a {
     padding: 3% 3% 7% 3%;
     width: 23%;
   }
-  .container__sept {
-    height: 130vh;
-  }
   .container__sept h2 {
-    font-size: 5rem;
-    margin: 7% auto;
+    font-size: 7rem;
     z-index: 100;
     margin-top: 20%;
   }
@@ -1726,9 +1726,6 @@ a {
   }
   .container__cinq p {
     font-size: 2.3rem;
-  }
-  .container__sept {
-    height: 170vh;
   }
   .liste_footer li a {
     font-size: 1.7rem;
@@ -1812,9 +1809,19 @@ a {
   .splitText h3 {
     font-size: 1.8rem;
   }
+  .shop {
+    margin: 15% 10%;
+    vertical-align: middle;
+    justify-self: center;
+  }
 }
 @media (min-width: 2200px) {
   .container__trois h2 {
     font-size: 7rem;
+  }
+}
+@media (min-width: 3000px) {
+  .container__sept h2 {
+    font-size: 14rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -14,21 +14,27 @@ body{
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    
+   
   }
 
   .image_mobile{
-    position:absolute;
-   width:400px;
-   bottom:11%;
+   position: relative;
+   min-width: 450px;
+   
+    top: 30%;
+    
+    
+   
   }
   .container__accueil{
-    height: 82.5vh;
+   
+    display: flex;
+    flex-direction: column;
   }
   .shop{
     top:18%;
  
-    max-width:90%;
+   
 }
 .shop h1{
     font-size: 1.05rem;
@@ -52,9 +58,7 @@ body{
       .container {
         max-width: 650px;
       }
-      .container__accueil{
-        height: 100vh;
-      }
+     
       .shop{
         top:15%;
     }
@@ -76,8 +80,7 @@ body{
         font-weight: 10;
     }
     .image_mobile{
-     width:520px;
-     top:44.6%;
+    
     }
 
 }
@@ -99,9 +102,7 @@ body{
   .container {
     max-width: 650px;
   }
-  .container__accueil{
-    height: 133.8vh;
-  }
+ 
   .shop{
     top:15%;
     right:8%;
@@ -136,9 +137,7 @@ body{
     width:950px;
     top:38.55%;
   }
-  .container__accueil{
-    height: 160vh;
-  }
+
     .container {
       max-width: 768px;
       padding: 0;
@@ -157,7 +156,7 @@ body{
       max-width: 1124px;
     }
     .image_mobile{
-      opacity:0;
+      display: none;
   }
     .shop{
       top:30%;
@@ -167,9 +166,11 @@ body{
   .container__accueil{
     background: url('/assets/banner-top 3.png');
     background-size:cover;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 12vh;
     margin-left: 0;
+    display: flex;
+    margin: 8% 5% 0 5%;
   }
   .shop h1{
       font-size: 1rem;
@@ -234,9 +235,9 @@ body{
       max-width: 1380px;
     }
     .container__accueil{
-      height: 88vh;
-      margin-top:0px;
-      width:100%;
+      min-height: 88vh;
+     
+     
   }
     .shop{
       max-width:34%;
@@ -263,7 +264,7 @@ body{
   @media (min-width: 1380px) {
 
     .container {
-      max-width: 1456px;
+   
     }
     .shop{
       max-width:44%;
@@ -337,7 +338,7 @@ body{
   }
   .container__accueil{
     max-width: 100%;
-    margin: 8% 5% 0 5%;
+  
     width: auto;
 }
 }
@@ -362,6 +363,7 @@ body{
 @media (min-width:1024px){
   .compliments{
     opacity: 1;
+    width: 90%;
   }
   .container__deux{
     opacity: 1;
