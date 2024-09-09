@@ -386,26 +386,54 @@ a {
   color: white;
 }
 @media (min-width: 320px) {
+  .murBlanc {
+    height: 200vh;
+  }
   .test {
-    display: contents;
+    display: flex;
+    order: 1;
+    position: absolute;
+ min-height: 50vh;
+    
+  }
+  .limonade , .punch{
+ 
+    margin-top: 10%;
+    width: 50%;
   }
   .textePc {
     display: none;
   }
   .images__pc {
-    display: none;
+    display: flex;
+    width: 80%;
+    margin: 0%;
+    height: auto;
+    padding: 0;
+    position:absolute;
+   margin: auto;
+    top: -10%;
+    left: 0;
+    right: 0;
+    order: 2;
+    
+  }
+  .images__pc img {
+    width: 100%;
+    height: auto;
+    position: absolute;
   }
   .container__un {
-    height: 180vh;
-    overflow-x: hidden;
+    min-height: 100vh;
+    overflow: hidden;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse  ;
     text-align: center;
     align-content: center;
-    height: 100%;
+   
   }
-  
+ 
   .image1 {
     width: 75%;
     position: relative;
@@ -416,19 +444,20 @@ a {
     position: relative;
     color: #1B604C;
     align-self: center;
-    margin-top: 20%;
-    width: 65%;
+   margin-bottom: 30%;
     font-size: 2.7rem;
     line-height: 50px;
     border-top: #1B604C;
   }
   .pAnim{
-    border-top: #1B604C 1px solid;
+  
     font-size: 1rem;
     margin-top: 5%;
+    order: 1;
   }
   .titreAnim{
     margin-bottom: 5%;
+    order: 1;
   }
   .container__un p {
     margin-top: 10%;
@@ -436,8 +465,7 @@ a {
     text-align: center;
    left: 0;
    right: 0;
-   padding: 10%;
-    margin: 0 auto;
+  
     font-size: 0.8rem;
     font-weight: 100;
 
@@ -457,21 +485,14 @@ a {
     display: flex;
     width: 100%;
     opacity:1;
+    position: absolute;
+    bottom:0;
   }
   .limonade h2 {
-    font-size: 1.8rem;
-    width: 50%;
-    margin-top: 10%;
-    margin-left: 5%;
-    color: #1B604C;
-  }
-  .limonade p {
-    font-size: 0.8rem;
-    width: 60%;
    
-    margin-left: -1%;
     color: #1B604C;
   }
+ 
   .image2 {
     width: 80%;
     position: relative;
@@ -479,18 +500,10 @@ a {
     right: 11%;
   }
   .punch h2 {
-    font-size: 1.8rem;
-    max-width: 50%;
-    float: right;
-    color: #1B604C;
-    margin-top: -90%;
-  }
-  .punch p {
-    font-size: 0.8rem;
-    width: 60%;
-    margin-right:-5%;
-    margin-top: -65%;
-    float: right;
+   width: 50%;
+   left: 0;
+   right: 0;
+   margin: auto;
     color: #1B604C;
   }
   .image3 {
@@ -743,9 +756,7 @@ a {
    
 
   }
-  .subtitle {
-    width: 425px;
-  }
+ 
   h5, h6 {
     font-size: 1.5rem;
     height: 110px;
@@ -753,10 +764,7 @@ a {
     padding-top: 25px;
   }
 
-  .punch h2 {
-    width: 30%;
-    margin-right: 10%;
-  }
+ 
 }
 @media (min-width: 768px) {
   .subtitle {
